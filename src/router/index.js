@@ -1,22 +1,30 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'home',
+    meta: {
+      icon: 'home', title: 'Home', required: false
+    },
+    component: () => import(/* webpackChunkName: "Home" */ '../pages/home/Home')
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: '/dashboard',
+    name: 'dashboard',
+    meta: {
+      icon: 'home', title: 'Dashboard', required: true
+    },
+    component: () => import(/* webpackChunkName: "dashboard" */ '../pages/dashboard/Dashboard')
+  },
+  {
+    path: '/login',
+    name: 'login',
+    meta: { title: 'Login' },
+    component: () => import(/* webpackChunkName: "login" */ '../pages/login/Login')
   }
 ]
 
@@ -24,4 +32,14 @@ const router = new VueRouter({
   routes
 })
 
+router.beforeEach((to, from, next) => {
+  document.title = `${to.meta.title} - BR Carvalho`
+  console.log(to.meta)
+
+  if (!window.uid && to.meta.required === true) {
+    next({ name: 'login' })
+  } else {
+    next()
+  }
+})
 export default router

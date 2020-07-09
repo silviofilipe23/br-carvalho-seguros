@@ -1,32 +1,34 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <base-spinner></base-spinner>
     <router-view/>
   </div>
 </template>
 
+<script>
+import BaseSpinner from './components/global/BaseSpinner'
+
+export default {
+  name: 'App',
+  components: {
+    BaseSpinner
+  },
+  // data: () => ({ isLogged: false }),
+  mounted () {
+    // this.$firebase.auth().onAuthStateChanged(user => {
+    //   window.uid = user ? user.uid : null
+    //   this.isLogged = !!user
+    //   this.$router.push({ name: window.uid ? 'dashboard' : 'login' })
+    setTimeout(() => {
+      this.$root.$emit('Spinner::hide')
+    }, 300)
+    // })
+  }
+}
+</script>
+
 <style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+  min-height: 100vh;
 }
 </style>
