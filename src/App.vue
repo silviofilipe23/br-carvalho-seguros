@@ -1,12 +1,17 @@
 <template>
   <div id="app">
     <base-spinner></base-spinner>
-    <router-view/>
+    <component :is='layout'>
+      <transition mode="out-in" name='router-anim'>
+        <router-view/>
+      </transition>
+    </component>
   </div>
 </template>
 
 <script>
 import BaseSpinner from './components/global/BaseSpinner'
+const Layout = 'default'
 
 export default {
   name: 'App',
@@ -23,6 +28,11 @@ export default {
       this.$root.$emit('Spinner::hide')
     }, 300)
     // })
+  },
+  computed: {
+    layout () {
+      return `${(this.$route.meta.layout || Layout)}-layout`
+    }
   }
 }
 </script>

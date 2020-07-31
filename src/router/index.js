@@ -8,7 +8,7 @@ const routes = [
     path: '/',
     name: 'home',
     meta: {
-      icon: 'home', title: 'Home', required: false
+      icon: 'home', title: 'Home', required: false, layout: 'default'
     },
     component: () => import(/* webpackChunkName: "Home" */ '../pages/home/Home')
   },
@@ -16,14 +16,14 @@ const routes = [
     path: '/dashboard',
     name: 'dashboard',
     meta: {
-      icon: 'home', title: 'Dashboard', required: true
+      icon: 'home', title: 'Dashboard', required: true, layout: 'dashboard'
     },
     component: () => import(/* webpackChunkName: "dashboard" */ '../pages/dashboard/Dashboard')
   },
   {
     path: '/login',
     name: 'login',
-    meta: { title: 'Login' },
+    meta: { title: 'Login', layout: 'login' },
     component: () => import(/* webpackChunkName: "login" */ '../pages/login/Login')
   }
 ]

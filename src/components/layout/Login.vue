@@ -1,10 +1,12 @@
 <template>
-  <h1>Home</h1>
+  <div>
+    <slot />
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'Home'
+  name: 'LoginLayout'
 }
 </script>
 
