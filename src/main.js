@@ -5,9 +5,16 @@ import FireBase from './firebase'
 import DefaultLayout from './components/layout/Default'
 import DashboardLayout from './components/layout/Dashboard'
 import LoginLayout from './components/layout/Login'
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+
 import './assets/scss/app.scss'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 Vue.use(FireBase)
+Vue.use(BootstrapVue)
+Vue.use(IconsPlugin)
+
 Vue.config.productionTip = false
 
 Vue.component('default-layout', DefaultLayout)

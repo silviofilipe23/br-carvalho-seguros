@@ -1,10 +1,20 @@
 <template>
-  <h1>Home</h1>
+  <div>
+    <carousel></carousel>
+    <div style="height: 1000px">
+
+    </div>
+  </div>
 </template>
 
 <script>
+import Carousel from '../../components/carousel/Carousel'
+
 export default {
-  name: 'Home'
+  name: 'Home',
+  components: {
+    Carousel
+  }
 }
 </script>
 
