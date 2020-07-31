@@ -1,15 +1,19 @@
 
 <template>
-  <div class="layout">
-
-      <h1>asdfasdf</h1>
+  <div class="container-fluid m-0 p-0">
+		<nav-bar-top></nav-bar-top>
     <slot />
   </div>
 </template>
 
 <script>
+import NavBarTop from '../global/NavBarTop'
+
 export default {
-  name: 'Default'
+	name: 'Default',
+	components: {
+		NavBarTop
+	}
 }
 </script>
 
