@@ -67,6 +67,5 @@ export default {
 <style lang="scss" scoped>
 .carousel-home {
 	height: 514px;
-	padding-top: 166px;
 }
 </style>

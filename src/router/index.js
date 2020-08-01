@@ -25,6 +25,12 @@ const routes = [
     name: 'login',
     meta: { title: 'Login', layout: 'login' },
     component: () => import(/* webpackChunkName: "login" */ '../pages/login/Login')
+  },
+  {
+    path: '/auto',
+    name: 'auto',
+    meta: { title: 'Auto', layout: 'default' },
+    component: () => import(/* webpackChunkName: "login" */ '../pages/auto/Auto')
   }
 ]
 

@@ -1,7 +1,9 @@
 <template>
   <div>
     <carousel></carousel>
-    <div style="height: 1000px">
+    <carousel-sec></carousel-sec>
+    <renovation></renovation>
+    <div style="height: 100px">
 
     </div>
   </div>
@@ -9,11 +11,15 @@
 
 <script>
 import Carousel from '../../components/carousel/Carousel'
+import CarouselSec from '../../components/carousel/CarouselSec'
+import Renovation from '../../components/renovation/Renovation'
 
 export default {
   name: 'Home',
   components: {
-    Carousel
+    Carousel,
+    CarouselSec,
+    Renovation
   }
 }
 </script>

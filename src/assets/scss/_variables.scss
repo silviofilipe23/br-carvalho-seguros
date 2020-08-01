@@ -1,45 +1,14 @@
-$dark: #080E33 !important;
-$darker: #111 !important;
-$dark-medium: #0C154A !important;
-$dark-low: #111E6C !important;
-$light-low: #999 !important;
-$light-medium: #2039CC !important;
-$ligther: #ddd !important;
-$light: #192DA1 !important;
+$dark: #304C89 !important;
+$dark-medium: #648DE5 !important;
+$dark-low: #9EB7E5 !important;
+$light: #E8E5DA !important;
 
-$featured: #ff9900 !important;
-$featured-dark: #d68100 !important;
+$featured: #CDC392 !important;
 
 :root {
   --dark: #{$dark};
-  --darker: #{$darker};
   --dark-medium: #{$dark-medium};
   --dark-low: #{$dark-low};
-  --light-low: #{$light-low};
-  --light-medium: #{$light-medium};
-  --ligther: #{$ligther};
   --light: #{$light};
   --featured: #{$featured};
-  --featured-dark: #{$featured-dark};
 }
-
-/* Color Theme Swatches in Hex */
-$Copy-of-Blue-Royal-Shades-1-hex: #2039CC;
-$Copy-of-Blue-Royal-Shades-2-hex: #192DA1;
-$Copy-of-Blue-Royal-Shades-3-hex: #111E6C;
-$Copy-of-Blue-Royal-Shades-4-hex: #0C154A;
-$Copy-of-Blue-Royal-Shades-5-hex: #080E33;
-
-/* Color Theme Swatches in RGBA */
-$Copy-of-Blue-Royal-Shades-1-rgba: rgba(31,56,204, 1);
-$Copy-of-Blue-Royal-Shades-2-rgba: rgba(24,45,161, 1);
-$Copy-of-Blue-Royal-Shades-3-rgba: rgba(17,29,107, 1);
-$Copy-of-Blue-Royal-Shades-4-rgba: rgba(11,20,73, 1);
-$Copy-of-Blue-Royal-Shades-5-rgba: rgba(8,14,51, 1);
-
-/* Color Theme Swatches in HSLA */
-$Copy-of-Blue-Royal-Shades-1-hsla: hsla(231, 72, 46, 1);
-$Copy-of-Blue-Royal-Shades-2-hsla: hsla(231, 73, 36, 1);
-$Copy-of-Blue-Royal-Shades-3-hsla: hsla(231, 72, 24, 1);
-$Copy-of-Blue-Royal-Shades-4-hsla: hsla(231, 72, 16, 1);
-$Copy-of-Blue-Royal-Shades-5-hsla: hsla(231, 72, 11, 1);

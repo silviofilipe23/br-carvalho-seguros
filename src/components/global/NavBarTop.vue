@@ -48,7 +48,7 @@ export default {
 	// }
 	.top {
 		height: 110px;
-		background-color: var(--light);
+		background-color: var(--dark);
 	}
 	.fixed {
 		position: fixed;

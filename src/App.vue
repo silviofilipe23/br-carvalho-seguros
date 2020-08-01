@@ -26,7 +26,7 @@ export default {
     //   this.$router.push({ name: window.uid ? 'dashboard' : 'login' })
     setTimeout(() => {
       this.$root.$emit('Spinner::hide')
-    }, 300)
+    }, 2000)
     // })
   },
   computed: {
