@@ -10,7 +10,7 @@ import TitlePage from '../../components/global/Title'
 import CarouselSec from '../../components/carousel/CarouselSec'
 
 export default {
-  name: 'Auto',
+  name: 'Residencia',
   components: {
     TitlePage,
     CarouselSec

@@ -2,7 +2,7 @@
   <form @submit.prevent="doLogin()" class="form-login">
     <div class="card">
       <div class="card-header text-center">
-        <h1 class="mb-0">BR Carvalho</h1>
+        <h1 class="mb-0">Expenses</h1>
       </div>
       <div class="card-body">
         <div class="form-group">
@@ -55,11 +55,12 @@ export default {
   methods: {
     async doLogin () {
       this.loading = true
+      console.log('ssss')
       const { email, password } = this
       try {
         const res = await this.$firebase.auth().signInWithEmailAndPassword(email, password)
         window.uid = res.user.uid
-        this.$router.push({ name: 'dashboard' })
+        this.$router.push({ name: 'home' })
       } catch (err) {
         let message = ''
         switch (err.code) {
@@ -72,10 +73,12 @@ export default {
           default:
             message = 'Não foi possível fazer login, tente novamente'
         }
-        this.$root.$emit('Notification::show', {
-          message,
-          type: 'danger'
-        })
+        console.log(message)
+
+        // this.$root.$emit('Notification::show', {
+        //   message,
+        //   type: 'danger'
+        // })
       }
       this.loading = false
     }
@@ -83,7 +86,7 @@ export default {
   beforeRouteEnter (to, from, next) {
     next(vm => {
       if (window.uid) {
-        vm.$router.push({ name: 'dashboard' })
+        vm.$router.push({ name: 'home' })
       }
     })
   }

@@ -28,10 +28,47 @@ const routes = [
   },
   {
     path: '/auto',
-    name: 'auto',
-    meta: { title: 'Auto', layout: 'default' },
+    name: 'Auto',
+    meta: { title: 'Seguro Auto', layout: 'default' },
     component: () => import(/* webpackChunkName: "login" */ '../pages/auto/Auto')
+  },
+  {
+    path: '/residencia',
+    name: 'Residência',
+    meta: { title: 'Seguro Residencial', layout: 'default' },
+    component: () => import(/* webpackChunkName: "login" */ '../pages/residencia/Residencia')
+  },
+  {
+    path: '/vida',
+    name: 'Vida',
+    meta: { title: 'Seguro de Vida', layout: 'default' },
+    component: () => import(/* webpackChunkName: "login" */ '../pages/vida/Vida')
+  },
+  {
+    path: '/acdt-pessoais',
+    name: 'Acidentes Pessoais',
+    meta: { title: 'Acidentes Pessoais', layout: 'default' },
+    component: () => import(/* webpackChunkName: "login" */ '../pages/acdtPessoais/AcdtPessoais')
+  },
+  {
+    path: '/pscard',
+    name: 'Cartão Porto Seguro',
+    meta: { title: 'Cartão Porto Seguro', layout: 'default' },
+    component: () => import(/* webpackChunkName: "login" */ '../pages/pscard/Pscard')
   }
+
+  // Consórcio Imobiliário
+  // Financiamentos
+  // Previdência
+  // Residencia
+  // Viagem
+  // Automóveis/Caminhoes
+  // Consorcio Auto
+  // empresarial/Condominio
+  // notebook
+  // planos de saude
+  // previdencia infantil
+  // seguro moto
 ]
 
 const router = new VueRouter({

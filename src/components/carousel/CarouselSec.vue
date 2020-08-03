@@ -5,14 +5,11 @@
 			<div class="row">
 				<b-carousel
 					id="carousel-1"
-					v-model="slide"
 					:interval="4000"
 					img-width="100%"
 					img-height="124"
 					background="#ababab"
 					style="text-shadow: 1px 1px 2px #333;"
-					@sliding-start="onSlideStart"
-					@sliding-end="onSlideEnd"
 				>
 					<b-carousel-slide>
 						<template v-slot:img>

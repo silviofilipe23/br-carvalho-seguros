@@ -13,7 +13,24 @@
 				<b-collapse id="nav-collapse" is-nav>
 
 					<!-- Right aligned nav items -->
-					<b-navbar-nav class="ml-auto">
+					<b-navbar-nav v-for="(item, index) in menu" v-bind:key="index" class="ml-auto">
+						<div v-if="item.meta.layout === 'default' && item.name !== 'home' && !item.children">
+							<b-nav-item right>
+								<router-link :to="item.path">{{item.name}}</router-link>
+							</b-nav-item>
+						</div>
+						<div v-else-if="item.meta.layout === 'default' && item.name !== 'home'">
+							<b-nav-item-dropdown :text="item.name" right>
+								<div v-for="(submenu, i) in item.children" v-bind:key="i">
+									<b-dropdown-item>
+										<router-link :to="submenu.path">{{submenu.name}}</router-link>
+									</b-dropdown-item>
+								</div>
+							</b-nav-item-dropdown>
+						</div>
+					</b-navbar-nav>
+
+					<!-- <b-navbar-nav class="ml-auto">
 						<b-nav-item-dropdown text="Lang" right>
 							<b-dropdown-item href="#">EN</b-dropdown-item>
 							<b-dropdown-item href="#">ES</b-dropdown-item>
@@ -22,14 +39,13 @@
 						</b-nav-item-dropdown>
 
 						<b-nav-item-dropdown right>
-							<!-- Using 'button-content' slot -->
 							<template v-slot:button-content>
 								<em>User</em>
 							</template>
 							<b-dropdown-item href="#">Profile</b-dropdown-item>
 							<b-dropdown-item href="#">Sign Out</b-dropdown-item>
 						</b-nav-item-dropdown>
-					</b-navbar-nav>
+					</b-navbar-nav> -->
 				</b-collapse>
 			</div>
 		</b-navbar>
@@ -38,7 +54,25 @@
 
 <script>
 export default {
-	name: 'NavBarTop'
+	name: 'NavBarTop',
+	data () {
+		return {
+			menu: []
+		}
+	},
+	mounted () {
+		this.createNav()
+	},
+	methods: {
+		createNav () {
+			const self = this
+			console.log(this.$router)
+
+			self.menu = this.$router.options.routes
+
+			console.log(self.menu)
+		}
+	}
 }
 </script>
 

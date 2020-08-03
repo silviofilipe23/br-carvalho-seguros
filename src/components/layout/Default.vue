@@ -12,7 +12,7 @@ import NavBarTop from '../global/NavBarTop'
 import FooterComponent from '../footer/Footer'
 
 export default {
-	name: 'Default',
+	name: 'DefaultLayout',
 	components: {
 		NavBarTop,
 		FooterComponent
