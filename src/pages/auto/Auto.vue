@@ -150,8 +150,10 @@
             </div>
           </div>
         </div>
-        <div class="col-4">
-
+        <div class="col-4 img-seguro-auto">
+          <!-- <figure>
+            <img class="img-thumbnail" :src="require('@/assets/seguro-auto.jpg')" alt="seguro-auto.png">
+          </figure> -->
         </div>
       </div>
     </div>
@@ -174,6 +176,12 @@ export default {
 
 <style lang="scss" scoped>
 
+.img-seguro-auto {
+  background-color: #FFFFFF;
+  background-position: center center;
+  background-image: url('../../assets/seguro-auto.jpg');
+}
+
 .box-cotacao h2 {
     font-size: 40px;
     color: #FF6200;
@@ -183,6 +191,7 @@ export default {
     position: relative;
     padding: 0 40px;
     background-color: #FFFFFF;
+    margin-top: 40px;
 }
 
 .titulo-cotacao:before {
@@ -195,6 +204,7 @@ export default {
     top: calc(50% - 0.5px);
     left: 0;
     z-index: 0;
+    margin-top: 20px;
 }
 
 .box-cotacao h3 {
@@ -206,11 +216,13 @@ export default {
     float: left;
     width: 100%;
 }
+
 span.titulo1 {
     font-size: 17px;
     color: #000000;
     font-weight: 700;
 }
+
 span.titulo2 {
     font-size: 25px;
     color: #FF6200;

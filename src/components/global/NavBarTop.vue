@@ -1,10 +1,10 @@
 <template>
   <div>
-		<b-navbar class="top" toggleable="lg" fixed="top">
+		<b-navbar class="top transform" :class="{ 'navbar--hidden': !showNavbar }" toggleable="lg" fixed="top">
 			<div class="container">
 			</div>
 		</b-navbar>
-		<b-navbar toggleable="lg"  class="fixed">
+		<b-navbar toggleable="lg" :class="{ 'navbar--hidden1': !showNavbar }"  class="fixed transform1">
 			<div class="container">
 				<b-navbar-brand href="#/">NavBar</b-navbar-brand>
 
@@ -41,11 +41,14 @@ export default {
 	name: 'NavBarTop',
 	data () {
 		return {
-			menu: []
+			menu: [],
+			showNavbar: true,
+			lastScrollPosition: 0
 		}
 	},
 	mounted () {
 		this.createNav()
+		window.addEventListener('scroll', this.onScroll)
 	},
 	methods: {
 		createNav () {
@@ -55,6 +58,19 @@ export default {
 			self.menu = this.$router.options.routes
 
 			console.log(self.menu)
+		},
+		onScroll () {
+			const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop
+			if (currentScrollPosition < 0) {
+				return
+			}
+			// Stop executing this function if the difference between
+			// current scroll position and last scroll position is less than some offset
+			if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 60) {
+				return
+			}
+			this.showNavbar = currentScrollPosition < this.lastScrollPosition
+			this.lastScrollPosition = currentScrollPosition
 		}
 	}
 }
@@ -81,5 +97,21 @@ export default {
 		border-bottom-color: #eee;
 		border-bottom-width: 1px;
 		border-bottom-style: solid;
+	}
+	.transform {
+		transform: translate3d(0, 0, 0);
+		transition: 0.2s all ease-out;
+	}
+	.transform1 {
+		transform: translate3d(0, 0, 0);
+		transition: 0.2s all ease-out;
+	}
+	.navbar.navbar--hidden {
+		box-shadow: none;
+		transform: translate3d(0, -100%, 0);
+	}
+	.navbar.navbar--hidden1 {
+		box-shadow: none;
+		transform: translate3d(0, -200%, 0);
 	}
 </style>
