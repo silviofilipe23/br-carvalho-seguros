@@ -18,15 +18,15 @@
             <div class="row">
               <div class="form-group col-6">
                 <label for="segurado">Segurado:</label>
-                <input placeholder="Digite o nome completo" type="text" class="form-control" id="segurado">
+                <input placeholder="Digite o nome completo" type="text" class="form-control" id="segurado" required>
               </div>
               <div class="form-group col-6">
                 <label for="email">Email:</label>
-                <input placeholder="pedro@exemplo.com" type="email" class="form-control" id="email">
+                <input placeholder="pedro@exemplo.com" type="email" class="form-control" id="email" required>
               </div>
               <div class="form-group col-3">
                 <label for="telefone">Telefone Residencial:</label>
-                <input placeholder="(xx) XXXX-XXXX" type="text" class="form-control" id="telefone">
+                <input placeholder="(xx) XXXX-XXXX" type="text" class="form-control" id="telefone" required>
               </div>
               <div class="form-group col-3">
                 <label for="celular">Celular:</label>
@@ -34,20 +34,20 @@
               </div>
               <div class="form-group col-3">
                 <label for="nascimento">Data de Nascimento:</label>
-                <input placeholder="dd/mm/aaaa" type="text" class="form-control" id="nascimento">
+                <input placeholder="dd/mm/aaaa" type="text" class="form-control" id="nascimento" required>
               </div>
               <div class="form-group col-3">
-                <label for="nascimento">Profissão:</label>
-                <input placeholder="Exemplo: Professor" type="text" class="form-control" id="nascimento">
+                <label for="prof">Profissão:</label>
+                <input placeholder="Exemplo: Professor" type="text" class="form-control" id="prof" required>
               </div>
               <div class="form-group col-3">
                 <label for="cpf">CPF:</label>
-                <input placeholder="000.000.000-00" type="text" class="form-control" id="cpf">
+                <input placeholder="000.000.000-00" type="text" class="form-control" id="cpf" required>
               </div>
               <div class="form-group col-3">
                 <label for="sexo">Sexo:</label>
-                <select class="form-control" id="sexo">
-                  <option disabled>Selecione</option>
+                <select class="form-control" id="sexo" required>
+                  <option disabled selected>Selecione</option>
                   <option>Masculino</option>
                   <option>Feminino</option>
                 </select>
@@ -55,7 +55,7 @@
               <div class="form-group col-3">
                 <label for="estcivil">Estado Civil:</label>
                 <select class="form-control" id="estcivil">
-                  <option disabled>Selecione</option>
+                  <option disabled selected>Selecione</option>
                   <option>Solteiro(a)</option>
                   <option>Casado(a)</option>
                   <option>Divorciado(a)</option>
@@ -64,7 +64,7 @@
               </div>
               <div class="form-group col-3">
                 <label for="cep">CEP Residencial:</label>
-                <input placeholder="00000-000" type="text" class="form-control" id="cep">
+                <input placeholder="00000-000" type="text" class="form-control" id="cep" required>
               </div>
             </div>
             <div class="row  box-cotacao" style="margin-top: 30px">
@@ -75,20 +75,20 @@
             <div class="row">
               <div class="form-group col-6">
                 <label for="veiculo">Veículo:</label>
-                <input placeholder="Exemplo: Gol" type="text" class="form-control" id="veiculo">
+                <input placeholder="Exemplo: Gol" type="text" class="form-control" id="veiculo" required>
               </div>
               <div class="form-group col-3">
                 <label for="ano">Ano de Fabricação:</label>
-                <input placeholder="Exemplo: 2020" type="text" class="form-control" id="ano">
+                <input placeholder="Exemplo: 2020" type="text" class="form-control" id="ano" required>
               </div>
               <div class="form-group col-3">
                 <label for="modelo">Modelo:</label>
-                <input placeholder="Exemplo: 1.0 Plus 16v" type="text" class="form-control" id="modelo">
+                <input placeholder="Exemplo: 1.0 Plus 16v" type="text" class="form-control" id="modelo" required >
               </div>
               <div class="form-group col-4">
                 <label for="0km">Veículo 0km:</label>
                 <select class="form-control" id="0km">
-                  <option disabled>Selecione</option>
+                  <option disabled selected>Selecione</option>
                   <option>Sim</option>
                   <option>Não</option>
                 </select>
@@ -100,7 +100,7 @@
               <div class="form-group col-4">
                 <label for="Financiado">Financiado:</label>
                 <select class="form-control" id="Financiado">
-                  <option disabled>Selecione</option>
+                  <option disabled selected>Selecione</option>
                   <option>Sim</option>
                   <option>Não</option>
                 </select>
@@ -115,7 +115,7 @@
         </div>
       </div>
     </div>
-    <div class="container" style="padding: 50px 0px 50px 0px">
+    <div class="container" style="padding: 50px 15px">
       <div class="row">
         <div class="col-8">
           <div class="row">
