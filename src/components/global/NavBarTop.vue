@@ -101,6 +101,7 @@ export default {
 	.transform {
 		transform: translate3d(0, 0, 0);
 		transition: 0.2s all ease-out;
+		opacity: 0.9;
 	}
 	.transform1 {
 		transform: translate3d(0, 0, 0);

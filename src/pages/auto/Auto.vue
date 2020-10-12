@@ -3,48 +3,48 @@
     <title-page :title="this.$route.meta.title"></title-page>
     <div class="container" style="padding-bottom: 30px">
       <div class="row box-cotacao">
-        <div class="col-12 titulo-cotacao">
+        <div class="col-sm-12  titulo-cotacao">
           <h2>Cotação para Seguro Automóvel</h2>
         </div>
       </div>
       <div class="row  box-cotacao" style="margin-top: 30px">
-        <div class="col-12">
+        <div class="col-sm-12">
           <h3>Dados do Segurado (Proprietário)</h3>
         </div>
       </div>
       <div class="row">
-        <div class="col-12">
+        <div class="col-sm-12">
           <form>
             <div class="row">
-              <div class="form-group col-6">
+              <div class="form-group col-lg-6 col-sm-12">
                 <label for="segurado">Segurado:</label>
                 <input placeholder="Digite o nome completo" type="text" class="form-control" id="segurado" required>
               </div>
-              <div class="form-group col-6">
+              <div class="form-group col-lg-6 col-sm-12">
                 <label for="email">Email:</label>
                 <input placeholder="pedro@exemplo.com" type="email" class="form-control" id="email" required>
               </div>
-              <div class="form-group col-3">
+              <div class="form-group col-lg-3 col-sm-12">
                 <label for="telefone">Telefone Residencial:</label>
                 <input placeholder="(xx) XXXX-XXXX" type="text" class="form-control" id="telefone" required>
               </div>
-              <div class="form-group col-3">
+              <div class="form-group col-lg-3 col-sm-12">
                 <label for="celular">Celular:</label>
                 <input placeholder="(xx) XXXXX-XXXX" type="text" class="form-control" id="celular">
               </div>
-              <div class="form-group col-3">
+              <div class="form-group col-lg-3 col-sm-12">
                 <label for="nascimento">Data de Nascimento:</label>
                 <input placeholder="dd/mm/aaaa" type="text" class="form-control" id="nascimento" required>
               </div>
-              <div class="form-group col-3">
+              <div class="form-group col-lg-3 col-sm-12">
                 <label for="prof">Profissão:</label>
                 <input placeholder="Exemplo: Professor" type="text" class="form-control" id="prof" required>
               </div>
-              <div class="form-group col-3">
+              <div class="form-group col-lg-3 col-sm-12">
                 <label for="cpf">CPF:</label>
                 <input placeholder="000.000.000-00" type="text" class="form-control" id="cpf" required>
               </div>
-              <div class="form-group col-3">
+              <div class="form-group col-lg-3 col-sm-12">
                 <label for="sexo">Sexo:</label>
                 <select class="form-control" id="sexo" required>
                   <option disabled selected>Selecione</option>
@@ -52,7 +52,7 @@
                   <option>Feminino</option>
                 </select>
               </div>
-              <div class="form-group col-3">
+              <div class="form-group col-lg-3 col-sm-12">
                 <label for="estcivil">Estado Civil:</label>
                 <select class="form-control" id="estcivil">
                   <option disabled selected>Selecione</option>
@@ -62,30 +62,30 @@
                   <option>Viúvo(a)</option>
                 </select>
               </div>
-              <div class="form-group col-3">
+              <div class="form-group col-lg-3 col-sm-12">
                 <label for="cep">CEP Residencial:</label>
                 <input placeholder="00000-000" type="text" class="form-control" id="cep" required>
               </div>
             </div>
             <div class="row  box-cotacao" style="margin-top: 30px">
-              <div class="col-12">
+              <div class="col-lg-12 col-sm-12">
                 <h3>Dados do Veículo</h3>
               </div>
             </div>
             <div class="row">
-              <div class="form-group col-6">
+              <div class="form-group col-lg-6 col-sm-12">
                 <label for="veiculo">Veículo:</label>
                 <input placeholder="Exemplo: Gol" type="text" class="form-control" id="veiculo" required>
               </div>
-              <div class="form-group col-3">
+              <div class="form-group col-lg-3 col-sm-12">
                 <label for="ano">Ano de Fabricação:</label>
                 <input placeholder="Exemplo: 2020" type="text" class="form-control" id="ano" required>
               </div>
-              <div class="form-group col-3">
+              <div class="form-group col-lg-3 col-sm-12">
                 <label for="modelo">Modelo:</label>
                 <input placeholder="Exemplo: 1.0 Plus 16v" type="text" class="form-control" id="modelo" required >
               </div>
-              <div class="form-group col-4">
+              <div class="form-group col-lg-4 col-sm-12">
                 <label for="0km">Veículo 0km:</label>
                 <select class="form-control" id="0km">
                   <option disabled selected>Selecione</option>
@@ -93,11 +93,11 @@
                   <option>Não</option>
                 </select>
               </div>
-              <div class="form-group col-4">
+              <div class="form-group col-lg-4 col-sm-12">
                 <label for="placa">Placa:</label>
                 <input placeholder="XXX0000" type="text" class="form-control" id="placa">
               </div>
-              <div class="form-group col-4">
+              <div class="form-group col-lg-4 col-sm-12">
                 <label for="Financiado">Financiado:</label>
                 <select class="form-control" id="Financiado">
                   <option disabled selected>Selecione</option>
@@ -107,7 +107,7 @@
               </div>
             </div>
             <div class="row">
-              <div class="form-group col-12">
+              <div class="form-group col-lg-12 col-sm-12">
                 <button type="submit" class="btn form-control btn-primary">Enviar Cotação</button>
               </div>
             </div>
@@ -117,15 +117,15 @@
     </div>
     <div class="container" style="padding: 50px 15px">
       <div class="row">
-        <div class="col-8">
+        <div class="col-lg-8 col-sm-12">
           <div class="row">
-            <div class="col-12">
+            <div class="col-lg-12 col-sm-12">
               <span class="titulo1">Aproveite hoje mesmo para garantir a melhor proteção para o seu automóvel, a preços muito especiais.</span>
             </div>
-            <div class="col-12" style="margin-top: 15px">
+            <div class="col-lg-12 col-sm-12" style="margin-top: 15px">
               <span class="titulo2">Automóveis / Caminhões</span>
             </div>
-            <div class="col-12">
+            <div class="col-lg-12 col-sm-12">
               <ul>
                 <li>Reposição pelo valor de veículo 0 km por 6 meses;</li>
                 <li>Assistência 24 Horas (assistência ao veículo e à residência);</li>
@@ -142,15 +142,15 @@
                 <li>Desconto em estacionamentos, táxi, locação de veículos blindados, renovação da CNH, serviços de despachantes, entre outros benefícios.</li>
               </ul>
             </div>
-            <div class="col-12" style="margin-top: 15px">
+            <div class="col-lg-12 col-sm-12" style="margin-top: 15px">
               <span class="titulo2">Tabela FIPE</span>
             </div>
-            <div class="col-12" style="margin-top: 15px">
+            <div class="col-lg-12 col-sm-12" style="margin-top: 15px">
               <span>Valor de Mercado Referenciado: Em caso de um sinistro de Perda Total por roubo, furto ou colisão, o segurado recebe da seguradora como indenização o Valor de Mercado Referenciado do seu veículo. O Valor da Indenização é igual ao valor do veículo constante na Tabela FIPE, considerando o fator de ajuste que você escolher quando da contratação do seguro.</span>
             </div>
           </div>
         </div>
-        <div class="col-4 img-seguro-auto">
+        <div class="col-lg-4 col-sm-12 img-seguro-auto">
           <!-- <figure>
             <img class="img-thumbnail" :src="require('@/assets/seguro-auto.jpg')" alt="seguro-auto.png">
           </figure> -->
