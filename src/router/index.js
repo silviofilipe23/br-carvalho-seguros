@@ -55,6 +55,12 @@ const routes = [
     name: 'Cartão Porto Seguro',
     meta: { title: 'Cartão Porto Seguro', layout: 'default' },
     component: () => import(/* webpackChunkName: "login" */ '../pages/pscard/Pscard')
+  },
+  {
+    path: '/consorcio-imobiliario',
+    name: 'Consórcio Imobiliário',
+    meta: { title: 'Consórcio Imobiliário', layout: 'default' },
+    component: () => import(/* webpackChunkName: "login" */ '../pages/consImobiliario/ConsImobiliario')
   }
 
   // Consórcio Imobiliário
