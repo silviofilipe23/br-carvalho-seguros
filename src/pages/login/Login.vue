@@ -39,6 +39,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'Login',
   data: () => ({
@@ -47,6 +48,7 @@ export default {
     loading: false
   }),
   mounted () {
+    console.log(process.env.NODE_ENV)
     if (process.env.NODE_ENV === 'development') {
       this.email = process.env.VUE_APP_LOGIN_EMAIL
       this.password = process.env.VUE_APP_LOGIN_PASS
@@ -55,7 +57,6 @@ export default {
   methods: {
     async doLogin () {
       this.loading = true
-      console.log('ssss')
       const { email, password } = this
       try {
         const res = await this.$firebase.auth().signInWithEmailAndPassword(email, password)
