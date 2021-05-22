@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- <base-spinner></base-spinner> -->
     <title-page :title="this.$route.meta.title"></title-page>
     <div class="container" style="padding-bottom: 30px">
       <div class="row box-cotacao">
@@ -183,17 +182,17 @@ export default {
         birthday: '',
         profession: '',
         cpf: '',
-        sex: '',
-        civilStatus: '',
+        sex: 'Selecione',
+        civilStatus: 'Selecione',
         cep: ''
       },
       car: {
         type: '',
         dateFabrication: '',
         model: '',
-        new: '',
+        new: 'Selecione',
         plate: '',
-        financed: ''
+        financed: 'Selecione'
       }
     }
   }),

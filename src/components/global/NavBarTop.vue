@@ -6,7 +6,9 @@
 		</b-navbar>
 		<b-navbar toggleable="lg" :class="{ 'navbar--hidden1': !showNavbar }"  class="fixed transform1">
 			<div class="container">
-				<b-navbar-brand href="#/">NavBar</b-navbar-brand>
+				<b-navbar-brand href="#/">
+					<img class="img-logo"  src="@/assets/logo.jpeg" alt="">
+				</b-navbar-brand>
 
 				<b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -114,5 +116,7 @@ export default {
 	.navbar.navbar--hidden1 {
 		box-shadow: none;
 		transform: translate3d(0, -200%, 0);
+	}.img-logo {
+		width: 30px;
 	}
 </style>
